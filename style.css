@@ -1,0 +1,284 @@
+/* Root Variables for Dark Theme Color Scheme */
+:root {
+    --primary-color: #64b5f6; /* Light blue for primary actions in dark theme */
+    --primary-color-dark: #42a5f5; /* Slightly darker blue for hover effects */
+    --secondary-color: #81c784; /* Light green for secondary accents */
+    --secondary-color-dark: #66bb6a; /* Darker green for hover */
+    --text-color-primary: #eee; /* Light text color for headings and important text */
+    --text-color-secondary: #ccc; /* Softer light text color for paragraphs */
+    --background-color-primary: #121212; /* Dark background color of the page */
+    --background-color-secondary: #1e1e1e; /* Slightly lighter dark background for sections/cards */
+    --accent-color: #ffca28; /* Yellow accent for highlights */
+    /* Removed --hero-image-url */
+}
+
+/* General Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color-primary); /* Dark page background */
+    color: var(--text-color-primary); /* Light main text color */
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--background-color-secondary); /* Dark header background */
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Adjust shadow for dark theme */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--primary-color); /* Light blue logo text */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color-secondary); /* Light navigation link color */
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary-color); /* Light blue navigation link hover */
+}
+
+.cta-button {
+    background-color: var(--primary-color); /* Light blue button background */
+    color: var(--background-color-primary); /* Dark text on light button */
+    border: none;
+    padding: 0.8rem 1.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color-dark); /* Slightly darker blue button hover */
+}
+
+.cta-button.primary {
+    font-size: 1.1rem;
+}
+
+.cta-button.large {
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+}
+
+.learn-more {
+    color: var(--text-color-secondary); /* Light learn more link */
+    text-decoration: none;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+}
+
+.learn-more:hover {
+    color: var(--primary-color); /* Light blue learn more hover */
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 3rem;
+    background-color: var(--background-color-primary); /* Dark hero background */
+    color: var(--text-color-primary); /* Light text on dark background */
+    text-align: left;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: inherit; /* Inherit light text color */
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    color: inherit; /* Inherit light text color */
+}
+
+/* How It Works Section */
+.how-it-works-section {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 4rem auto;
+    text-align: center;
+    background-color: var(--background-color-secondary); /* Darker background */
+    border-radius: 8px;
+    color: var(--text-color-primary); /* Light text */
+}
+
+.how-it-works-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color); /* Light blue heading */
+}
+
+.step {
+    background-color: var(--background-color-secondary); /* Darker background for steps */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Adjust shadow */
+    text-align: left;
+}
+
+.step h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color); /* Light blue step heading */
+}
+
+.step p {
+    color: var(--text-color-secondary); /* Lighter text for step description */
+}
+
+/* Pricing Section */
+.pricing-section {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 4rem auto;
+    text-align: center;
+    background-color: var(--background-color-primary); /* Dark background */
+    border-radius: 8px;
+    color: var(--text-color-primary); /* Light text */
+}
+
+.pricing-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color); /* Light blue heading */
+}
+
+.pricing-tiers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.pricing-tier {
+    background-color: var(--background-color-secondary); /* Darker background for tiers */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adjust shadow */
+    text-align: center;
+}
+
+.pricing-tier.popular {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Adjust shadow for popular tier */
+}
+
+.pricing-tier h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color); /* Light blue tier heading */
+}
+
+.price {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color); /* Light blue price text */
+    margin-bottom: 1.5rem;
+}
+
+.pricing-tier li {
+    color: var(--text-color-secondary); /* Lighter text for features */
+    border-bottom: 1px solid #333; /* Darker border for separation */
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 4rem auto;
+    text-align: center;
+    background-color: var(--background-color-secondary); /* Darker background */
+    color: var(--text-color-primary); /* Light text */
+}
+
+.testimonials-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color); /* Light blue heading */
+}
+
+.testimonial {
+    background-color: var(--background-color-secondary); /* Darker background for testimonials */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Adjust shadow */
+    min-width: 300px;
+    text-align: left;
+}
+
+.testimonial p {
+    font-style: italic;
+    color: var(--text-color-secondary); /* Lighter testimonial text */
+}
+
+.testimonial cite {
+    color: var(--primary-color); /* Light blue cite text */
+}
+
+/* Bottom CTA Section */
+.cta-bottom {
+    background-color: var(--primary-color); /* Light blue background */
+    color: var(--background-color-primary); /* Dark text on light background */
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.cta-bottom h2 {
+    color: var(--background-color-primary); /* Dark heading on light background */
+}
+
+.cta-bottom p {
+    color: var(--background-color-primary); /* Dark text on light background */
+}
+
+/* Footer */
+footer {
+    background-color: var(--background-color-primary); /* Dark footer background */
+    color: var(--text-color-secondary); /* Lighter footer text */
+    text-align: center;
+    padding: 2rem 0;
+}
+
+footer a {
+    color: var(--primary-color); /* Light blue footer link */
+}
+
+footer a:hover {
+    color: var(--text-color-primary); /* Light hover on footer link */
+}
