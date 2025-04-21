@@ -8,15 +8,25 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">Truckers</div>
+        <div class="logo">Your Service Name</div>
+        <nav class="desktop-nav">
             <ul>
                 <li><a href="#how-it-works">How It Works</a></li>
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
             </ul>
-            <button class="cta-button">Start Your Free Trial</button>
         </nav>
+        <div class="mobile-nav">
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="visually-hidden">Menu</span>
+                &#9776;
+            </button>
+            <ul class="mobile-nav-links">
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#" class="cta-button">Start Your Free Trial</a></li> </ul>
+        </div>
     </header>
 
     <section class="hero">
